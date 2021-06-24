@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5850FECCA3ACBFB6C87A9BBD /* Pods_Aircraft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 581E2A958CE428367BA7C0B1 /* Pods_Aircraft.framework */; };
+		8D75B662A4B5D0F21CF80AB4 /* Pods_AircraftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 320AEA18089983A6406A8FC7 /* Pods_AircraftTests.framework */; };
+		A484B9D6659A56FE526E22AD /* Pods_Aircraft_AircraftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E46A0E5CFF8A54A9D666927B /* Pods_Aircraft_AircraftUITests.framework */; };
 		FA41F6DF2682DB7B00CC16F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41F6DE2682DB7B00CC16F2 /* AppDelegate.swift */; };
 		FA41F6E12682DB7B00CC16F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41F6E02682DB7B00CC16F2 /* SceneDelegate.swift */; };
 		FA41F6E32682DB7B00CC16F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41F6E22682DB7B00CC16F2 /* ViewController.swift */; };
@@ -15,6 +18,14 @@
 		FA41F6EB2682DB8000CC16F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA41F6E92682DB8000CC16F2 /* LaunchScreen.storyboard */; };
 		FA41F6F62682DB8000CC16F2 /* AircraftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41F6F52682DB8000CC16F2 /* AircraftTests.swift */; };
 		FA41F7012682DB8000CC16F2 /* AircraftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41F7002682DB8000CC16F2 /* AircraftUITests.swift */; };
+		FA41F7102682E20A00CC16F2 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41F70F2682E20A00CC16F2 /* Flight.swift */; };
+		FA41F7132682E30000CC16F2 /* FlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41F7122682E30000CC16F2 /* FlightsViewController.swift */; };
+		FA41F7152682E33B00CC16F2 /* AirportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41F7142682E33B00CC16F2 /* AirportsViewController.swift */; };
+		FA41F7172682EF6B00CC16F2 /* Aircraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41F7162682EF6B00CC16F2 /* Aircraft.swift */; };
+		FA41F7192682F79300CC16F2 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41F7182682F79300CC16F2 /* Feed.swift */; };
+		FAC1487B2683970A001AD53B /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC1487A2683970A001AD53B /* Airport.swift */; };
+		FAC1487D2683D97E001AD53B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC1487C2683D97E001AD53B /* MapViewController.swift */; };
+		FAC1488126843BB6001AD53B /* FlightMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC1488026843BB6001AD53B /* FlightMapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +46,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08EA12F4FC5634A652A2BF46 /* Pods-Aircraft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aircraft.debug.xcconfig"; path = "Target Support Files/Pods-Aircraft/Pods-Aircraft.debug.xcconfig"; sourceTree = "<group>"; };
+		1B0AD9B558ADC31B0D9F14CF /* Pods-Aircraft-AircraftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aircraft-AircraftUITests.release.xcconfig"; path = "Target Support Files/Pods-Aircraft-AircraftUITests/Pods-Aircraft-AircraftUITests.release.xcconfig"; sourceTree = "<group>"; };
+		29FAF977AED9FCB3AB168985 /* Pods-Aircraft-AircraftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aircraft-AircraftUITests.debug.xcconfig"; path = "Target Support Files/Pods-Aircraft-AircraftUITests/Pods-Aircraft-AircraftUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		320AEA18089983A6406A8FC7 /* Pods_AircraftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AircraftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		581E2A958CE428367BA7C0B1 /* Pods_Aircraft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aircraft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64E30E3CFAF5378F3093F61E /* Pods-Aircraft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aircraft.release.xcconfig"; path = "Target Support Files/Pods-Aircraft/Pods-Aircraft.release.xcconfig"; sourceTree = "<group>"; };
+		97F1589E79495C830DA7EBF9 /* Pods-AircraftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AircraftTests.release.xcconfig"; path = "Target Support Files/Pods-AircraftTests/Pods-AircraftTests.release.xcconfig"; sourceTree = "<group>"; };
+		B265AA6FD1B8C0D383941C84 /* Pods-AircraftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AircraftTests.debug.xcconfig"; path = "Target Support Files/Pods-AircraftTests/Pods-AircraftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E46A0E5CFF8A54A9D666927B /* Pods_Aircraft_AircraftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aircraft_AircraftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA41F6DB2682DB7B00CC16F2 /* Aircraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aircraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA41F6DE2682DB7B00CC16F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA41F6E02682DB7B00CC16F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +69,14 @@
 		FA41F6FC2682DB8000CC16F2 /* AircraftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AircraftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA41F7002682DB8000CC16F2 /* AircraftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircraftUITests.swift; sourceTree = "<group>"; };
 		FA41F7022682DB8000CC16F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA41F70F2682E20A00CC16F2 /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
+		FA41F7122682E30000CC16F2 /* FlightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsViewController.swift; sourceTree = "<group>"; };
+		FA41F7142682E33B00CC16F2 /* AirportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsViewController.swift; sourceTree = "<group>"; };
+		FA41F7162682EF6B00CC16F2 /* Aircraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aircraft.swift; sourceTree = "<group>"; };
+		FA41F7182682F79300CC16F2 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		FAC1487A2683970A001AD53B /* Airport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
+		FAC1487C2683D97E001AD53B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		FAC1488026843BB6001AD53B /* FlightMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightMapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5850FECCA3ACBFB6C87A9BBD /* Pods_Aircraft.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D75B662A4B5D0F21CF80AB4 /* Pods_AircraftTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +100,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A484B9D6659A56FE526E22AD /* Pods_Aircraft_AircraftUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09336CE7DB01AAEF5F4F3053 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				581E2A958CE428367BA7C0B1 /* Pods_Aircraft.framework */,
+				E46A0E5CFF8A54A9D666927B /* Pods_Aircraft_AircraftUITests.framework */,
+				320AEA18089983A6406A8FC7 /* Pods_AircraftTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		14E7B25B007DC4352E6CA106 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				08EA12F4FC5634A652A2BF46 /* Pods-Aircraft.debug.xcconfig */,
+				64E30E3CFAF5378F3093F61E /* Pods-Aircraft.release.xcconfig */,
+				29FAF977AED9FCB3AB168985 /* Pods-Aircraft-AircraftUITests.debug.xcconfig */,
+				1B0AD9B558ADC31B0D9F14CF /* Pods-Aircraft-AircraftUITests.release.xcconfig */,
+				B265AA6FD1B8C0D383941C84 /* Pods-AircraftTests.debug.xcconfig */,
+				97F1589E79495C830DA7EBF9 /* Pods-AircraftTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FA41F6D22682DB7B00CC16F2 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +137,8 @@
 				FA41F6F42682DB8000CC16F2 /* AircraftTests */,
 				FA41F6FF2682DB8000CC16F2 /* AircraftUITests */,
 				FA41F6DC2682DB7B00CC16F2 /* Products */,
+				14E7B25B007DC4352E6CA106 /* Pods */,
+				09336CE7DB01AAEF5F4F3053 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +155,7 @@
 		FA41F6DD2682DB7B00CC16F2 /* Aircraft */ = {
 			isa = PBXGroup;
 			children = (
+				FA41F70E2682E09400CC16F2 /* Model */,
 				FA41F6DE2682DB7B00CC16F2 /* AppDelegate.swift */,
 				FA41F6E02682DB7B00CC16F2 /* SceneDelegate.swift */,
 				FA41F6E22682DB7B00CC16F2 /* ViewController.swift */,
@@ -106,6 +163,10 @@
 				FA41F6E72682DB8000CC16F2 /* Assets.xcassets */,
 				FA41F6E92682DB8000CC16F2 /* LaunchScreen.storyboard */,
 				FA41F6EC2682DB8000CC16F2 /* Info.plist */,
+				FA41F7122682E30000CC16F2 /* FlightsViewController.swift */,
+				FA41F7142682E33B00CC16F2 /* AirportsViewController.swift */,
+				FAC1487C2683D97E001AD53B /* MapViewController.swift */,
+				FAC1488026843BB6001AD53B /* FlightMapViewController.swift */,
 			);
 			path = Aircraft;
 			sourceTree = "<group>";
@@ -128,6 +189,17 @@
 			path = AircraftUITests;
 			sourceTree = "<group>";
 		};
+		FA41F70E2682E09400CC16F2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA41F70F2682E20A00CC16F2 /* Flight.swift */,
+				FA41F7162682EF6B00CC16F2 /* Aircraft.swift */,
+				FA41F7182682F79300CC16F2 /* Feed.swift */,
+				FAC1487A2683970A001AD53B /* Airport.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +207,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA41F7052682DB8000CC16F2 /* Build configuration list for PBXNativeTarget "Aircraft" */;
 			buildPhases = (
+				4F8C07C13ABE7F6EAE98BF39 /* [CP] Check Pods Manifest.lock */,
 				FA41F6D72682DB7B00CC16F2 /* Sources */,
 				FA41F6D82682DB7B00CC16F2 /* Frameworks */,
 				FA41F6D92682DB7B00CC16F2 /* Resources */,
+				2C5FABB1C6C258F8137C7CB7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +226,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA41F7082682DB8000CC16F2 /* Build configuration list for PBXNativeTarget "AircraftTests" */;
 			buildPhases = (
+				FA235B46DD637EAF1057A8CE /* [CP] Check Pods Manifest.lock */,
 				FA41F6ED2682DB8000CC16F2 /* Sources */,
 				FA41F6EE2682DB8000CC16F2 /* Frameworks */,
 				FA41F6EF2682DB8000CC16F2 /* Resources */,
@@ -170,9 +245,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA41F70B2682DB8000CC16F2 /* Build configuration list for PBXNativeTarget "AircraftUITests" */;
 			buildPhases = (
+				CB68573CC019BB35EBD1D774 /* [CP] Check Pods Manifest.lock */,
 				FA41F6F82682DB8000CC16F2 /* Sources */,
 				FA41F6F92682DB8000CC16F2 /* Frameworks */,
 				FA41F6FA2682DB8000CC16F2 /* Resources */,
+				78DB0973678FF72F92FB8E06 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,13 +330,124 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2C5FABB1C6C258F8137C7CB7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Aircraft/Pods-Aircraft-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Aircraft/Pods-Aircraft-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Aircraft/Pods-Aircraft-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F8C07C13ABE7F6EAE98BF39 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Aircraft-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78DB0973678FF72F92FB8E06 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Aircraft-AircraftUITests/Pods-Aircraft-AircraftUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Aircraft-AircraftUITests/Pods-Aircraft-AircraftUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Aircraft-AircraftUITests/Pods-Aircraft-AircraftUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB68573CC019BB35EBD1D774 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Aircraft-AircraftUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA235B46DD637EAF1057A8CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AircraftTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FA41F6D72682DB7B00CC16F2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC1487B2683970A001AD53B /* Airport.swift in Sources */,
+				FA41F7172682EF6B00CC16F2 /* Aircraft.swift in Sources */,
+				FA41F7192682F79300CC16F2 /* Feed.swift in Sources */,
+				FAC1487D2683D97E001AD53B /* MapViewController.swift in Sources */,
 				FA41F6E32682DB7B00CC16F2 /* ViewController.swift in Sources */,
+				FA41F7102682E20A00CC16F2 /* Flight.swift in Sources */,
 				FA41F6DF2682DB7B00CC16F2 /* AppDelegate.swift in Sources */,
+				FA41F7132682E30000CC16F2 /* FlightsViewController.swift in Sources */,
+				FAC1488126843BB6001AD53B /* FlightMapViewController.swift in Sources */,
+				FA41F7152682E33B00CC16F2 /* AirportsViewController.swift in Sources */,
 				FA41F6E12682DB7B00CC16F2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +621,7 @@
 		};
 		FA41F7062682DB8000CC16F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08EA12F4FC5634A652A2BF46 /* Pods-Aircraft.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -451,6 +640,7 @@
 		};
 		FA41F7072682DB8000CC16F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64E30E3CFAF5378F3093F61E /* Pods-Aircraft.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -469,6 +659,7 @@
 		};
 		FA41F7092682DB8000CC16F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B265AA6FD1B8C0D383941C84 /* Pods-AircraftTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +681,7 @@
 		};
 		FA41F70A2682DB8000CC16F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97F1589E79495C830DA7EBF9 /* Pods-AircraftTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -511,6 +703,7 @@
 		};
 		FA41F70C2682DB8000CC16F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29FAF977AED9FCB3AB168985 /* Pods-Aircraft-AircraftUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -530,6 +723,7 @@
 		};
 		FA41F70D2682DB8000CC16F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B0AD9B558ADC31B0D9F14CF /* Pods-Aircraft-AircraftUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
