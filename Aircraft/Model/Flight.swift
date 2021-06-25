@@ -16,4 +16,6 @@ struct Flight {
     var longitude: Float
     var arrivalCode: String
     var departureCode: String
+    var direction: Float
+    var status: String
 }

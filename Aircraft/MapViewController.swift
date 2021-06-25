@@ -14,6 +14,7 @@ class MapViewController: UIViewController {
     var itemSelected:Airport?
     var arrayAirports = [Airport]()
     var allSelected = false
+    var location = CLLocation()
     //var userAnnontation = MKPointAnnotation()
     //var delegate:PostDelegate?
     override func viewDidLoad() {
@@ -41,7 +42,7 @@ class MapViewController: UIViewController {
     }
     func userPin () {
         let userAnnontation = MKPointAnnotation()
-        userAnnontation.coordinate = CLLocationCoordinate2D(latitude: 9.935007, longitude: -84.103011)
+        userAnnontation.coordinate = CLLocationCoordinate2D(latitude: self.location.coordinate.latitude, longitude: self.location.coordinate.longitude)
         userAnnontation.title = "Usted está aquí."
         userAnnontation.accessibilityElementIsFocused()
         mapView.addAnnotation(userAnnontation)

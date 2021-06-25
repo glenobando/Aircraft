@@ -18,11 +18,11 @@ class AirportsViewController: UIViewController, CLLocationManagerDelegate {
     let annontation = MKPointAnnotation()
     var arrayAirport = [Airport]()
     var array = [String]()
-    let urlRatio = "https://aviation-edge.com/v2/public/nearby?key=9a4206-8c088d&lat=9.935007&lng=-84.103011&distance=100"
+    let urlRatio = "https://aviation-edge.com/v2/public/nearby?key=9a4206-8c088d"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        callAirports()
+        //callAirports()
         locationManager.requestAlwaysAuthorization()
         locationManager.requestWhenInUseAuthorization()
         if CLLocationManager.locationServicesEnabled(){
@@ -36,10 +36,12 @@ class AirportsViewController: UIViewController, CLLocationManagerDelegate {
         let destinoAll = segue.destination as? MapViewController
         destinoAll?.arrayAirports = arrayAirport
         destinoAll?.allSelected = true
+        destinoAll?.location = locationManager.location!
         if let index = self.airportTableView.indexPathForSelectedRow {
             let destino = segue.destination as? MapViewController
             destino?.itemSelected = arrayAirport[index.row]
             destino?.allSelected = false
+            destino?.location = locationManager.location!
         }
         
     }
@@ -47,12 +49,18 @@ class AirportsViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first{
             annontation.coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-            print(annontation.coordinate)
+            callAirports(location: location)
         }
     }
 
-    func callAirports (){
-        Session.default.request(urlRatio).responseJSON { [self] response in
+    func callAirports (location: CLLocation){
+        let child = SpinnerViewController()
+        addChild(child)
+        child.view.frame = view.frame
+        view.addSubview(child.view)
+        child.didMove(toParent: self)
+
+        Session.default.request(urlRatio+"&lat=\(location.coordinate.latitude)&lng=\(location.coordinate.longitude)&distance=100").responseJSON { [self] response in
             switch response.result {
             case .success(let data):
                 if let airports = data as? [[String: Any]] {
@@ -67,17 +75,26 @@ class AirportsViewController: UIViewController, CLLocationManagerDelegate {
                         arrayAirport.append(aux)
                         
                     }
-                    print(arrayAirport)
+                    self.navigationController?.tabBarItem.badgeColor = .systemGreen
+                    self.navigationController?.tabBarItem.badgeValue = "\(arrayAirport.count)"
                 }
             case .failure(let error):
                 print("Something went wrong: \(error)")
             }
             self.airportTableView.reloadData()
-        }
+            child.willMove(toParent: nil)
+            child.view.removeFromSuperview()
+            child.removeFromParent()
+       }
+        
     }
 }
 
 extension AirportsViewController:UITableViewDelegate, UITableViewDataSource {
+    override func viewWillAppear(_ animated: Bool) {
+        airportTableView.reloadData()
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrayAirport.count
     }
@@ -87,6 +104,11 @@ extension AirportsViewController:UITableViewDelegate, UITableViewDataSource {
         let name = arrayAirport[indexPath.row].nameAirport
         let country = arrayAirport[indexPath.row].nameCountry
         cell.textLabel?.text = name + ", " + country
+        cell.detailTextLabel?.text = arrayAirport[indexPath.row].codeIataAirport
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Nearby Airports"
     }
 }

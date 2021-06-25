@@ -18,11 +18,12 @@ class FlightsViewController: UIViewController, CLLocationManagerDelegate {
     var arrayFligth = [Flight]()
     var array = [String]()
     let url = "https://aviation-edge.com/v2/public/flights?key=9a4206-8c088d&limit=5"
-    let urlRatio = "https://aviation-edge.com/v2/public/flights?key=9a4206-8c088d%20&lat=9.935007&lng=-84.103011&distance=200"
-    
+//    let urlRatio = "https://aviation-edge.com/v2/public/flights?key=9a4206-8c088d%20&lat=9.935007&lng=-84.103011&distance=200"
+    let urlRatio = "https://aviation-edge.com/v2/public/flights?key=9a4206-8c088d"
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        callFlights()
+        //callFlights()
         locationManager.requestAlwaysAuthorization()
         locationManager.requestWhenInUseAuthorization()
         if CLLocationManager.locationServicesEnabled(){
@@ -36,10 +37,12 @@ class FlightsViewController: UIViewController, CLLocationManagerDelegate {
         let destinoAll = segue.destination as? FlightMapViewController
         destinoAll?.arrayFlights = arrayFligth
         destinoAll?.allSelected = true
-        if let index = self.flightsTableView.indexPathForSelectedRow {
+        destinoAll?.location = locationManager.location!
+       if let index = self.flightsTableView.indexPathForSelectedRow {
             let destino = segue.destination as? FlightMapViewController
             destino?.itemSelected = arrayFligth[index.row]
             destino?.allSelected = false
+            destino?.location = locationManager.location!
         }
         
     }
@@ -47,12 +50,24 @@ class FlightsViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first{
             annontation.coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            callFlights(location: location)
             //print(annontation.coordinate)
         }
     }
 
-    func callFlights (){
-        Session.default.request(urlRatio).responseJSON { [self] response in
+    @IBAction func refreshList(_ sender: Any) {
+        arrayFligth.removeAll()
+        callFlights(location: locationManager.location!)
+    }
+    
+    func callFlights (location: CLLocation){
+        let child = SpinnerViewController()
+        addChild(child)
+        child.view.frame = view.frame
+        view.addSubview(child.view)
+        child.didMove(toParent: self)
+        
+        Session.default.request(urlRatio+"&lat=\(location.coordinate.latitude)&lng=\(location.coordinate.longitude)&distance=200").responseJSON { [self] response in
             switch response.result {
             case .success(let data):
                 if let flights = data as? [[String: Any]] {
@@ -65,20 +80,27 @@ class FlightsViewController: UIViewController, CLLocationManagerDelegate {
                             iataNumber:aircraft!["iataNumber"] as! String,
                             icaoNumber: aircraft!["icaoNumber"] as! String,
                             number: aircraft!["number"] as! String,
-                            altitude: Float(truncating:geography!["altitude"] as! NSNumber ),
+                            altitude: Float(truncating: geography!["altitude"] as! NSNumber ),
                             latitude: Float(truncating: geography!["latitude"] as! NSNumber ),
                             longitude: Float(truncating: geography!["longitude"] as! NSNumber ),
                             arrivalCode: arrival!["iataCode"] as! String,
-                            departureCode: departure!["iataCode"] as! String
+                            departureCode: departure!["iataCode"] as! String,
+                            direction: Float(truncating: geography!["direction"] as! NSNumber),
+                            status: flight["status"] as! String
                         )
                         arrayFligth.append(aux)
-                        print(arrayFligth.count)
                     }
+                    self.navigationController?.tabBarItem.badgeColor = .systemGreen
+                    self.navigationController?.tabBarItem.badgeValue = "\(arrayFligth.count)"
                 }
             case .failure(let error):
                 print("Something went wrong: \(error)")
             }
             self.flightsTableView.reloadData()
+            
+            child.willMove(toParent: nil)
+            child.view.removeFromSuperview()
+            child.removeFromParent()
         }
     }
     /*
@@ -103,13 +125,23 @@ class FlightsViewController: UIViewController, CLLocationManagerDelegate {
 }
 
 extension FlightsViewController:UITableViewDelegate, UITableViewDataSource {
+    
+    override func viewWillAppear(_ animated: Bool) {
+        flightsTableView.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrayFligth.count
     }
   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath)
-        cell.textLabel?.text = "Flight #" + arrayFligth[indexPath.row].iataNumber + " - Departure: " + arrayFligth[indexPath.row].departureCode + " - Arrival: " + arrayFligth[indexPath.row].arrivalCode
+        cell.textLabel?.text = "Flight #" + arrayFligth[indexPath.row].iataNumber
+        cell.detailTextLabel?.text = "(\(arrayFligth[indexPath.row].status))\t🛫 " + arrayFligth[indexPath.row].departureCode + "\t🛬 " + arrayFligth[indexPath.row].arrivalCode
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Real Time Flights"
     }
 }
