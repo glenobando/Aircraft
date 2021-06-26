@@ -38,13 +38,12 @@ class FlightsViewController: UIViewController, CLLocationManagerDelegate {
         destinoAll?.arrayFlights = arrayFligth
         destinoAll?.allSelected = true
         destinoAll?.location = locationManager.location!
-       if let index = self.flightsTableView.indexPathForSelectedRow {
+        if let index = self.flightsTableView.indexPathForSelectedRow {
             let destino = segue.destination as? FlightMapViewController
             destino?.itemSelected = arrayFligth[index.row]
             destino?.allSelected = false
             destino?.location = locationManager.location!
         }
-        
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -144,4 +143,30 @@ extension FlightsViewController:UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Real Time Flights"
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .actionSheet)
+        // 2
+        let mapAction = UIAlertAction(title: "Show in Map", style: .default, handler: {_ in
+            self.performSegue(withIdentifier: "ShowMapSegue", sender: self)
+        })
+        let detailAction = UIAlertAction(title: "View Details", style: .default,  handler: {_ in
+            self.performSegue(withIdentifier: "ShowFligthDetailSegue", sender: self)
+        })
+            
+        // 3
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel,  handler: {_ in
+            self.flightsTableView.reloadData()
+        })
+            
+        // 4
+        optionMenu.addAction(mapAction)
+        optionMenu.addAction(detailAction)
+        optionMenu.addAction(cancelAction)
+            
+        // 5
+        self.present(optionMenu, animated: true, completion: nil)
+    }
+    
+    
 }

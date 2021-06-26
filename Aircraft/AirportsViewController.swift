@@ -111,4 +111,28 @@ extension AirportsViewController:UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Nearby Airports"
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .actionSheet)
+        // 2
+        let mapAction = UIAlertAction(title: "Show in Map", style: .default, handler: {_ in
+            self.performSegue(withIdentifier: "ShowMapSegue", sender: self)
+        })
+        let detailAction = UIAlertAction(title: "View Details", style: .default,  handler: {_ in
+            self.performSegue(withIdentifier: "ShowAirportDetailSegue", sender: self)
+        })
+            
+        // 3
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel,  handler: {_ in
+            self.airportTableView.reloadData()
+        })
+            
+        // 4
+        optionMenu.addAction(mapAction)
+        optionMenu.addAction(detailAction)
+        optionMenu.addAction(cancelAction)
+            
+        // 5
+        self.present(optionMenu, animated: true, completion: nil)
+    }
 }

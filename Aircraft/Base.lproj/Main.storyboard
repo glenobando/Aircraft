@@ -8,6 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Airport Details-->
+        <scene sceneID="3ct-Jx-wqf">
+            <objects>
+                <viewController id="Omm-Fv-0e0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b4V-2L-rqx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="e84-cj-udr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Airport Details" id="iZX-zo-dDz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t8O-10-nDA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3306" y="745"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -36,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3318.840579710145" y="744.64285714285711"/>
+            <point key="canvasLocation" x="4048" y="753"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="GXI-dy-RBS">
@@ -97,9 +113,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="fgu-FV-pcm" kind="show" id="Wno-VQ-T4r"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -136,6 +149,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="flightsTableView" destination="xtf-W5-79t" id="hm5-vu-Pfz"/>
+                        <segue destination="fgu-FV-pcm" kind="show" identifier="ShowMapSegue" id="IPQ-1G-nNs"/>
+                        <segue destination="eVa-z4-9Mq" kind="show" identifier="ShowFligthDetailSegue" id="8tM-qz-oxW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OaF-ZE-G4e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -175,6 +190,22 @@
             </objects>
             <point key="canvasLocation" x="3234.7826086956525" y="69.642857142857139"/>
         </scene>
+        <!--Flight Details-->
+        <scene sceneID="UzH-2L-J2m">
+            <objects>
+                <viewController id="eVa-z4-9Mq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sUQ-ZO-aSn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="aea-OC-5eC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Flight Details" id="aLd-Nw-esA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cqn-fK-S6g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4000" y="70"/>
+        </scene>
         <!--Airports-->
         <scene sceneID="RuE-rG-cAX">
             <objects>
@@ -210,9 +241,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="64e-Sr-OXc" kind="show" id="9hg-S2-pnc"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -244,6 +272,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="airportTableView" destination="MSv-ch-fht" id="uou-bD-h6H"/>
+                        <segue destination="64e-Sr-OXc" kind="show" identifier="ShowMapSegue" id="VKR-rX-OCt"/>
+                        <segue destination="Omm-Fv-0e0" kind="show" identifier="ShowAirportDetailSegue" id="Pew-6y-Kd8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5lI-8Y-bzk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -320,8 +350,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9hg-S2-pnc"/>
-        <segue reference="Wno-VQ-T4r"/>
+        <segue reference="Kjm-bN-mgO"/>
+        <segue reference="IPQ-1G-nNs"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="airplane.circle.fill" catalog="system" width="128" height="121"/>
