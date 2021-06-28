@@ -21,9 +21,33 @@ class FlightsViewController: UIViewController, CLLocationManagerDelegate {
 //    let urlRatio = "https://aviation-edge.com/v2/public/flights?key=9a4206-8c088d%20&lat=9.935007&lng=-84.103011&distance=200"
     let urlRatio = "https://aviation-edge.com/v2/public/flights?key=9a4206-8c088d"
 
+    var client: Client?
+    let session = URLSession.shared
+    let defaults = UserDefaults.standard
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.presentLoginView()
+        flightsTableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //callFlights()
+        client = Client (session: session)
+        client?.getUsers(type: UserList.self,  complete: {result in
+
+            switch result {
+            case .success(let users):
+                print(users)
+            case .failure(let error):
+                print(error)
+                self.defaults.removeObject(forKey: appConstants.loginTokenKey)
+                self.defaults.synchronize()
+                self.presentLoginView()
+            }
+        })
+        
         locationManager.requestAlwaysAuthorization()
         locationManager.requestWhenInUseAuthorization()
         if CLLocationManager.locationServicesEnabled(){
@@ -124,11 +148,7 @@ class FlightsViewController: UIViewController, CLLocationManagerDelegate {
 }
 
 extension FlightsViewController:UITableViewDelegate, UITableViewDataSource {
-    
-    override func viewWillAppear(_ animated: Bool) {
-        flightsTableView.reloadData()
-    }
-    
+ 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrayFligth.count
     }
@@ -168,5 +188,13 @@ extension FlightsViewController:UITableViewDelegate, UITableViewDataSource {
         self.present(optionMenu, animated: true, completion: nil)
     }
     
-    
+    func presentLoginView()  {
+        guard let _ = defaults.object(forKey: appConstants.loginTokenKey) else {
+            let loginVc = self.storyboard?.instantiateViewController(identifier: "login") as? LoginViewController
+            loginVc?.modalPresentationStyle = .fullScreen
+            self.present(loginVc!, animated: true, completion: nil)
+            return
+        }
+        
+    }
 }
