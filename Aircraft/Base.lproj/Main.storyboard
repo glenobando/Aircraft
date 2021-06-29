@@ -168,9 +168,6 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Airport: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpg-PR-QOw">
                                                             <rect key="frame" x="0.0" y="0.0" width="319" height="15"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="21" id="dEY-xq-a8L"/>
-                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -404,9 +401,6 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Airport: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bl4-ib-aoU">
                                                             <rect key="frame" x="0.0" y="0.0" width="319" height="15"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="21" id="HUi-x8-UMT"/>
-                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>

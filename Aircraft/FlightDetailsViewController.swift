@@ -38,6 +38,12 @@ class FlightDetailsViewController: UITableViewController {
     func getFlightDetails() {
         var array = [FlightDetail]()
         
+        let child = SpinnerViewController()
+        addChild(child)
+        child.view.frame = view.frame
+        view.addSubview(child.view)
+        child.didMove(toParent: self)
+        
         Session.default.request(urlTimeTable+"&flight_iata=\(itemSelected?.iataNumber ?? "")").responseJSON { [self] response in
             switch response.result {
             case .success(let data):
@@ -73,6 +79,9 @@ class FlightDetailsViewController: UITableViewController {
                         }
                     }
                     self.arrayDetails = array
+                    child.willMove(toParent: nil)
+                    child.view.removeFromSuperview()
+                    child.removeFromParent()
                 }
             case .failure(let error):
                 print("Something went wrong: \(error)")
@@ -108,8 +117,6 @@ class FlightDetailsViewController: UITableViewController {
             self.present(alert, animated: true)
         }
 
-        let flights = realm.objects(FlightObject.self)
-        print(flights)
     }
     
     /*
