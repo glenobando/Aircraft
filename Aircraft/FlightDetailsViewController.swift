@@ -117,8 +117,6 @@ class FlightDetailsViewController: UITableViewController {
             self.present(alert, animated: true)
         }
 
-        let flights = realm.objects(FlightObject.self)
-        print(flights)
     }
     
     /*

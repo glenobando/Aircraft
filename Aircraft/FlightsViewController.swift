@@ -84,7 +84,6 @@ class FlightsViewController: UIViewController, CLLocationManagerDelegate {
     }
 
     @IBAction func refreshList(_ sender: Any) {
-        arrayFligth.removeAll()
         callFlights(location: locationManager.location!)
     }
     
@@ -95,6 +94,7 @@ class FlightsViewController: UIViewController, CLLocationManagerDelegate {
         view.addSubview(child.view)
         child.didMove(toParent: self)
         
+        arrayFligth.removeAll()
         Session.default.request(urlRatio+"&lat=\(location.coordinate.latitude)&lng=\(location.coordinate.longitude)&distance=200").responseJSON { [self] response in
             switch response.result {
             case .success(let data):
