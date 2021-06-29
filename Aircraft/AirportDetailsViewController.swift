@@ -37,6 +37,12 @@ class AirportDetailsViewController: UITableViewController {
     func getFlightDetails() {
         var array = [FlightDetail]()
         
+        let child = SpinnerViewController()
+        addChild(child)
+        child.view.frame = view.frame
+        view.addSubview(child.view)
+        child.didMove(toParent: self)
+
         Session.default.request(urlTimeTable+"&iataCode=\(itemSelected?.codeIataAirport ?? "")").responseJSON { [self] response in
             switch response.result {
             case .success(let data):
@@ -75,6 +81,9 @@ class AirportDetailsViewController: UITableViewController {
                         }
                     }
                     self.arrayDetails = array
+                    child.willMove(toParent: nil)
+                    child.view.removeFromSuperview()
+                    child.removeFromParent()
                 }
             case .failure(let error):
                 print("Something went wrong: \(error)")
