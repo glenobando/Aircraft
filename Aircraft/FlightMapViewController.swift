@@ -30,6 +30,9 @@ class FlightMapViewController: UIViewController {
             putPin()
         }
         
+        flightViewMap.showsCompass = true
+        //flightViewMap.showsZoomControls 
+        
     }
     
     func createPins () {
