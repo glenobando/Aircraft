@@ -21,6 +21,7 @@
                     <connections>
                         <segue destination="hMJ-gb-zlA" kind="relationship" relationship="viewControllers" id="Rbd-d5-n3x"/>
                         <segue destination="pql-tl-X76" kind="relationship" relationship="viewControllers" id="d3Y-B5-VxB"/>
+                        <segue destination="SSb-bq-Jmn" kind="relationship" relationship="viewControllers" id="dk1-rN-FTd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HwL-qk-fKE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -261,7 +262,13 @@
                             <outlet property="delegate" destination="XUh-dw-vM6" id="310-vR-t5r"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="WlB-zr-mre"/>
+                    <navigationItem key="navigationItem" id="WlB-zr-mre">
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="Zkg-Kz-4FB">
+                            <connections>
+                                <action selector="addToBookmarks:" destination="XUh-dw-vM6" id="vNv-CX-XJh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="fligthDetailsTableView" destination="JQB-5O-eO9" id="tPh-CM-M0w"/>
                     </connections>
@@ -500,6 +507,63 @@
             </objects>
             <point key="canvasLocation" x="3272" y="745"/>
         </scene>
+        <!--Bookmarks-->
+        <scene sceneID="5Yo-hs-q1p">
+            <objects>
+                <tableViewController id="woG-CC-zVd" customClass="BookmarksViewController" customModule="Aircraft" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="rWk-oi-qg9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="UKq-P3-ede" detailTextLabel="D63-JK-IPn" style="IBUITableViewCellStyleSubtitle" id="ynr-qT-m53">
+                                <rect key="frame" x="0.0" y="49.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ynr-qT-m53" id="5in-qV-2iw">
+                                    <rect key="frame" x="0.0" y="0.0" width="384.5" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UKq-P3-ede">
+                                            <rect key="frame" x="20" y="6" width="25" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D63-JK-IPn">
+                                            <rect key="frame" x="20" y="22.5" width="40.5" height="13.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="XUh-dw-vM6" kind="show" id="76S-7r-jy5"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="woG-CC-zVd" id="RtA-fo-FpL"/>
+                            <outlet property="delegate" destination="woG-CC-zVd" id="IPK-cW-A0x"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Bookmarks" id="v9n-2F-5gQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="tHa-5n-GYf">
+                            <connections>
+                                <action selector="deleteAll:" destination="woG-CC-zVd" id="CnT-7B-trE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="FlightsTableView" destination="rWk-oi-qg9" id="bKK-Wf-c6a"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2nb-Re-j00" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4957.971014492754" y="744.64285714285711"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="vdA-dy-Lta">
             <objects>
@@ -618,13 +682,34 @@
             </objects>
             <point key="canvasLocation" x="902.89855072463774" y="732.58928571428567"/>
         </scene>
+        <!--Bookmarks-->
+        <scene sceneID="dDa-kB-TaF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SSb-bq-Jmn" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Bookmarks" image="book.fill" catalog="system" id="22a-H1-5ta"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4p8-eG-rda">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="woG-CC-zVd" kind="relationship" relationship="rootViewController" id="9I9-Ng-GRQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UGc-x1-hOi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4047.826086956522" y="744.64285714285711"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="VKR-rX-OCt"/>
+        <segue reference="zeR-3m-fsi"/>
         <segue reference="IPQ-1G-nNs"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="airplane.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="book.fill" catalog="system" width="128" height="102"/>
         <image name="flag.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

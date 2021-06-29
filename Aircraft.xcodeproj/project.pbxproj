@@ -19,6 +19,7 @@
 		B9CDA4D1268A7FF500DBB095 /* FlightDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CDA4D0268A7FF500DBB095 /* FlightDetailsViewController.swift */; };
 		B9CDA4D3268A828500DBB095 /* FlightDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CDA4D2268A828500DBB095 /* FlightDetail.swift */; };
 		B9CDA4D7268AEFB300DBB095 /* AirportDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CDA4D6268AEFB300DBB095 /* AirportDetailsViewController.swift */; };
+		B9CDA4D9268B0C6000DBB095 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CDA4D8268B0C6000DBB095 /* BookmarksViewController.swift */; };
 		FA41F6DF2682DB7B00CC16F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41F6DE2682DB7B00CC16F2 /* AppDelegate.swift */; };
 		FA41F6E12682DB7B00CC16F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41F6E02682DB7B00CC16F2 /* SceneDelegate.swift */; };
 		FA41F6E32682DB7B00CC16F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41F6E22682DB7B00CC16F2 /* ViewController.swift */; };
@@ -72,6 +73,7 @@
 		B9CDA4D0268A7FF500DBB095 /* FlightDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailsViewController.swift; sourceTree = "<group>"; };
 		B9CDA4D2268A828500DBB095 /* FlightDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetail.swift; sourceTree = "<group>"; };
 		B9CDA4D6268AEFB300DBB095 /* AirportDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailsViewController.swift; sourceTree = "<group>"; };
+		B9CDA4D8268B0C6000DBB095 /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		E46A0E5CFF8A54A9D666927B /* Pods_Aircraft_AircraftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aircraft_AircraftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA41F6DB2682DB7B00CC16F2 /* Aircraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aircraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA41F6DE2682DB7B00CC16F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				A508260326893C2000FCF823 /* AppConstants.swift */,
 				B9CDA4D0268A7FF500DBB095 /* FlightDetailsViewController.swift */,
 				B9CDA4D6268AEFB300DBB095 /* AirportDetailsViewController.swift */,
+				B9CDA4D8268B0C6000DBB095 /* BookmarksViewController.swift */,
 			);
 			path = Aircraft;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9CDA4D9268B0C6000DBB095 /* BookmarksViewController.swift in Sources */,
 				A545711126891ACF00262543 /* LoginViewController.swift in Sources */,
 				FAC1487B2683970A001AD53B /* Airport.swift in Sources */,
 				FA41F7172682EF6B00CC16F2 /* Aircraft.swift in Sources */,
