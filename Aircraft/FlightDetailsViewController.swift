@@ -8,7 +8,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-//import RealmSwift
+import RealmSwift
 
 class FlightDetailsViewController: UITableViewController {
 
@@ -81,35 +81,35 @@ class FlightDetailsViewController: UITableViewController {
     }
     
     @IBAction func addToBookmarks(_ sender: Any) {
-//        let realm = try! Realm()
-//        let flight = FlightObject()
-//
-//        flight.iataNumber = itemSelected!.iataNumber
-//        flight.icaoNumber = itemSelected!.icaoNumber
-//        flight.number = itemSelected!.number
-//        flight.altitude = itemSelected!.altitude
-//        flight.latitude = itemSelected!.latitude
-//        flight.longitude = itemSelected!.longitude
-//        flight.arrivalCode = itemSelected!.arrivalCode
-//        flight.departureCode = itemSelected!.departureCode
-//        flight.direction = itemSelected!.direction
-//        flight.status = itemSelected!.status
-//
-//        let f = realm.objects(FlightObject.self).filter("iataNumber == '\(itemSelected!.iataNumber)'")
-//
-//        if f.count == 0 {
-//            try! realm.write({
-//                realm.add(flight)
-//            })
-//        } else {
-//            let alert = UIAlertController(title: "Bookmarks", message: "Flight \(itemSelected!.iataNumber) is already in Bookmarks", preferredStyle: .alert)
-//            let okAction = UIAlertAction(title: "Ok", style: .default)
-//            alert.addAction(okAction)
-//            self.present(alert, animated: true)
-//        }
-//
-//        let flights = realm.objects(FlightObject.self)
-//        print(flights)
+        let realm = try! Realm()
+        let flight = FlightObject()
+
+        flight.iataNumber = itemSelected!.iataNumber
+        flight.icaoNumber = itemSelected!.icaoNumber
+        flight.number = itemSelected!.number
+        flight.altitude = itemSelected!.altitude
+        flight.latitude = itemSelected!.latitude
+        flight.longitude = itemSelected!.longitude
+        flight.arrivalCode = itemSelected!.arrivalCode
+        flight.departureCode = itemSelected!.departureCode
+        flight.direction = itemSelected!.direction
+        flight.status = itemSelected!.status
+
+        let f = realm.objects(FlightObject.self).filter("iataNumber == '\(itemSelected!.iataNumber)'")
+
+        if f.count == 0 {
+            try! realm.write({
+                realm.add(flight)
+            })
+        } else {
+            let alert = UIAlertController(title: "Bookmarks", message: "Flight \(itemSelected!.iataNumber) is already in Bookmarks", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default)
+            alert.addAction(okAction)
+            self.present(alert, animated: true)
+        }
+
+        let flights = realm.objects(FlightObject.self)
+        print(flights)
     }
     
     /*
@@ -124,18 +124,18 @@ class FlightDetailsViewController: UITableViewController {
 
 }
 
-//class FlightObject: Object {
-//    @objc dynamic var iataNumber = ""
-//    @objc dynamic var icaoNumber = ""
-//    @objc dynamic var number = ""
-//    @objc dynamic var altitude = Float(0)
-//    @objc dynamic var latitude = Float(0)
-//    @objc dynamic var longitude = Float(0)
-//    @objc dynamic var arrivalCode = ""
-//    @objc dynamic var departureCode = ""
-//    @objc dynamic var direction = Float(0)
-//    @objc dynamic var status = ""
-//}
+class FlightObject: Object {
+    @objc dynamic var iataNumber = ""
+    @objc dynamic var icaoNumber = ""
+    @objc dynamic var number = ""
+    @objc dynamic var altitude = Float(0)
+    @objc dynamic var latitude = Float(0)
+    @objc dynamic var longitude = Float(0)
+    @objc dynamic var arrivalCode = ""
+    @objc dynamic var departureCode = ""
+    @objc dynamic var direction = Float(0)
+    @objc dynamic var status = ""
+}
 
 extension FlightDetailsViewController {
     

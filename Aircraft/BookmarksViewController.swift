@@ -6,7 +6,7 @@
 //
 
 import UIKit
-//import RealmSwift
+import RealmSwift
 
 class BookmarksViewController: UITableViewController {
 
@@ -49,49 +49,49 @@ class BookmarksViewController: UITableViewController {
 
     
     func getBookmarks() -> [Flight] {
-//        let realm = try! Realm()
-//        let flights = realm.objects(FlightObject.self)
+        let realm = try! Realm()
+        let flights = realm.objects(FlightObject.self)
         var flightList = [Flight]()
-//
-//        for f in flights {
-//            flightList.append(Flight(iataNumber: f.iataNumber, icaoNumber: f.icaoNumber, number: f.number, altitude: f.altitude, latitude: f.latitude, longitude: f.longitude, arrivalCode: f.arrivalCode, departureCode: f.departureCode, direction: f.direction, status: f.status))
-//        }
-//
+
+        for f in flights {
+            flightList.append(Flight(iataNumber: f.iataNumber, icaoNumber: f.icaoNumber, number: f.number, altitude: f.altitude, latitude: f.latitude, longitude: f.longitude, arrivalCode: f.arrivalCode, departureCode: f.departureCode, direction: f.direction, status: f.status))
+        }
+
         return flightList
     }
     
     func deleteBookmark(itemSelected: Flight?){
-//        let realm = try! Realm()
-//
-//        let f = realm.objects(FlightObject.self).filter("iataNumber == '\(itemSelected!.iataNumber)'")
-//
-//        if f.count > 0 {
-//            try! realm.write({
-//                realm.delete(f[0])
-//            })
-//        }
-//        let alert = UIAlertController(title: "Bookmarks", message: "Flight \(itemSelected!.iataNumber) deleted from Bookmarks", preferredStyle: .alert)
-//        let okAction = UIAlertAction(title: "Ok", style: .default)
-//        alert.addAction(okAction)
-//        self.present(alert, animated: true)
+        let realm = try! Realm()
+
+        let f = realm.objects(FlightObject.self).filter("iataNumber == '\(itemSelected!.iataNumber)'")
+
+        if f.count > 0 {
+            try! realm.write({
+                realm.delete(f[0])
+            })
+        }
+        let alert = UIAlertController(title: "Bookmarks", message: "Flight \(itemSelected!.iataNumber) deleted from Bookmarks", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default)
+        alert.addAction(okAction)
+        self.present(alert, animated: true)
     }
     
     @IBAction func deleteAll(_ sender: Any) {
-//        let alert = UIAlertController(title: "Bookmarks", message: "Delete All Bookmarks?", preferredStyle: .alert)
-//
-//        let yesAction = UIAlertAction(title: "Yes", style: .default) { action in
-//            let realm = try! Realm()
-//            try! realm.write {
-//                realm.deleteAll()
-//            }
-//            self.arrayFlight?.removeAll()
-//        }
-//
-//        let noAction = UIAlertAction(title: "No", style: .cancel)
-//        alert.addAction(yesAction)
-//        alert.addAction(noAction)
-//        self.present(alert, animated: true)
-//
+        let alert = UIAlertController(title: "Bookmarks", message: "Delete All Bookmarks?", preferredStyle: .alert)
+
+        let yesAction = UIAlertAction(title: "Yes", style: .default) { action in
+            let realm = try! Realm()
+            try! realm.write {
+                realm.deleteAll()
+            }
+            self.arrayFlight?.removeAll()
+        }
+
+        let noAction = UIAlertAction(title: "No", style: .cancel)
+        alert.addAction(yesAction)
+        alert.addAction(noAction)
+        self.present(alert, animated: true)
+
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
