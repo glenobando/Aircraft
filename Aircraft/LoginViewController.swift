@@ -48,7 +48,6 @@ class LoginViewController: UIViewController {
                 print(error)
             }
         })
-        
     }
 }
 
