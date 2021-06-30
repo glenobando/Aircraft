@@ -38,10 +38,15 @@ class AirportsViewController: UIViewController, CLLocationManagerDelegate {
         destinoAll?.allSelected = true
         destinoAll?.location = locationManager.location!
         if let index = self.airportTableView.indexPathForSelectedRow {
-            let destino = segue.destination as? MapViewController
-            destino?.itemSelected = arrayAirport[index.row]
-            destino?.allSelected = false
-            destino?.location = locationManager.location!
+            if segue.identifier == "ShowMapSegue" {
+                let destino = segue.destination as? MapViewController
+                destino?.itemSelected = arrayAirport[index.row]
+                destino?.allSelected = false
+                destino?.location = locationManager.location!
+            } else if segue.identifier == "ShowAirportDetailSegue" {
+                let destino = segue.destination as? AirportDetailsViewController
+                destino?.itemSelected = arrayAirport[index.row]
+            }
         }
         
     }

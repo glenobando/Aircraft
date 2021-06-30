@@ -63,10 +63,15 @@ class FlightsViewController: UIViewController, CLLocationManagerDelegate {
         destinoAll?.allSelected = true
         destinoAll?.location = locationManager.location!
         if let index = self.flightsTableView.indexPathForSelectedRow {
-            let destino = segue.destination as? FlightMapViewController
-            destino?.itemSelected = arrayFligth[index.row]
-            destino?.allSelected = false
-            destino?.location = locationManager.location!
+            if (segue.identifier == "ShowMapSegue"){
+                let destino = segue.destination as? FlightMapViewController
+                destino?.itemSelected = arrayFligth[index.row]
+                destino?.allSelected = false
+                destino?.location = locationManager.location!
+            } else if (segue.identifier == "ShowFligthDetailSegue"){
+                let destino = segue.destination as? FlightDetailsViewController
+                destino?.itemSelected = arrayFligth[index.row]
+            }
         }
     }
     
@@ -79,7 +84,6 @@ class FlightsViewController: UIViewController, CLLocationManagerDelegate {
     }
 
     @IBAction func refreshList(_ sender: Any) {
-        arrayFligth.removeAll()
         callFlights(location: locationManager.location!)
     }
     
@@ -90,6 +94,7 @@ class FlightsViewController: UIViewController, CLLocationManagerDelegate {
         view.addSubview(child.view)
         child.didMove(toParent: self)
         
+        arrayFligth.removeAll()
         Session.default.request(urlRatio+"&lat=\(location.coordinate.latitude)&lng=\(location.coordinate.longitude)&distance=200").responseJSON { [self] response in
             switch response.result {
             case .success(let data):

@@ -6,9 +6,11 @@ target 'Aircraft' do
   use_frameworks!
 
   # Pods for Aircraft
+   #pod 'RealmSwift'
    pod 'Alamofire'
    pod 'SwiftyJSON'
-  target 'AircraftTests' do
+
+   target 'AircraftTests' do
     inherit! :search_paths
     # Pods for testing
   end

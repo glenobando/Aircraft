@@ -3,19 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		5850FECCA3ACBFB6C87A9BBD /* Pods_Aircraft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 581E2A958CE428367BA7C0B1 /* Pods_Aircraft.framework */; };
 		8D75B662A4B5D0F21CF80AB4 /* Pods_AircraftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 320AEA18089983A6406A8FC7 /* Pods_AircraftTests.framework */; };
 		A484B9D6659A56FE526E22AD /* Pods_Aircraft_AircraftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E46A0E5CFF8A54A9D666927B /* Pods_Aircraft_AircraftUITests.framework */; };
-		B9CDA4CF2685B84400DBB095 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CDA4CE2685B84400DBB095 /* SpinnerViewController.swift */; };
 		A50825E926893AEF00FCF823 /* NetworkGeneric.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50825E826893AEF00FCF823 /* NetworkGeneric.swift */; };
 		A50825EE26893B3D00FCF823 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50825ED26893B3D00FCF823 /* ApiError.swift */; };
 		A50825FC26893BF900FCF823 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50825FB26893BF900FCF823 /* Client.swift */; };
 		A508260426893C2000FCF823 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A508260326893C2000FCF823 /* AppConstants.swift */; };
 		A545711126891ACF00262543 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A545711026891ACF00262543 /* LoginViewController.swift */; };
+		B9710D48268B7A9B007D4C7D /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = B9710D47268B7A9B007D4C7D /* Realm */; };
+		B9710D4A268B7A9B007D4C7D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B9710D49268B7A9B007D4C7D /* RealmSwift */; };
+		B9CDA4CF2685B84400DBB095 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CDA4CE2685B84400DBB095 /* SpinnerViewController.swift */; };
+		B9CDA4D1268A7FF500DBB095 /* FlightDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CDA4D0268A7FF500DBB095 /* FlightDetailsViewController.swift */; };
+		B9CDA4D3268A828500DBB095 /* FlightDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CDA4D2268A828500DBB095 /* FlightDetail.swift */; };
+		B9CDA4D7268AEFB300DBB095 /* AirportDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CDA4D6268AEFB300DBB095 /* AirportDetailsViewController.swift */; };
+		B9CDA4D9268B0C6000DBB095 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CDA4D8268B0C6000DBB095 /* BookmarksViewController.swift */; };
 		FA41F6DF2682DB7B00CC16F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41F6DE2682DB7B00CC16F2 /* AppDelegate.swift */; };
 		FA41F6E12682DB7B00CC16F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41F6E02682DB7B00CC16F2 /* SceneDelegate.swift */; };
 		FA41F6E32682DB7B00CC16F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41F6E22682DB7B00CC16F2 /* ViewController.swift */; };
@@ -66,6 +72,10 @@
 		A545711026891ACF00262543 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B265AA6FD1B8C0D383941C84 /* Pods-AircraftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AircraftTests.debug.xcconfig"; path = "Target Support Files/Pods-AircraftTests/Pods-AircraftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B9CDA4CE2685B84400DBB095 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
+		B9CDA4D0268A7FF500DBB095 /* FlightDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailsViewController.swift; sourceTree = "<group>"; };
+		B9CDA4D2268A828500DBB095 /* FlightDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetail.swift; sourceTree = "<group>"; };
+		B9CDA4D6268AEFB300DBB095 /* AirportDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailsViewController.swift; sourceTree = "<group>"; };
+		B9CDA4D8268B0C6000DBB095 /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		E46A0E5CFF8A54A9D666927B /* Pods_Aircraft_AircraftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aircraft_AircraftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA41F6DB2682DB7B00CC16F2 /* Aircraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aircraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA41F6DE2682DB7B00CC16F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +106,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9710D4A268B7A9B007D4C7D /* RealmSwift in Frameworks */,
+				B9710D48268B7A9B007D4C7D /* Realm in Frameworks */,
 				5850FECCA3ACBFB6C87A9BBD /* Pods_Aircraft.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,6 +213,9 @@
 				B9CDA4CE2685B84400DBB095 /* SpinnerViewController.swift */,
 				A545711026891ACF00262543 /* LoginViewController.swift */,
 				A508260326893C2000FCF823 /* AppConstants.swift */,
+				B9CDA4D0268A7FF500DBB095 /* FlightDetailsViewController.swift */,
+				B9CDA4D6268AEFB300DBB095 /* AirportDetailsViewController.swift */,
+				B9CDA4D8268B0C6000DBB095 /* BookmarksViewController.swift */,
 			);
 			path = Aircraft;
 			sourceTree = "<group>";
@@ -230,6 +245,7 @@
 				FA41F7162682EF6B00CC16F2 /* Aircraft.swift */,
 				FA41F7182682F79300CC16F2 /* Feed.swift */,
 				FAC1487A2683970A001AD53B /* Airport.swift */,
+				B9CDA4D2268A828500DBB095 /* FlightDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -252,6 +268,10 @@
 			dependencies = (
 			);
 			name = Aircraft;
+			packageProductDependencies = (
+				B9710D47268B7A9B007D4C7D /* Realm */,
+				B9710D49268B7A9B007D4C7D /* RealmSwift */,
+			);
 			productName = Aircraft;
 			productReference = FA41F6DB2682DB7B00CC16F2 /* Aircraft.app */;
 			productType = "com.apple.product-type.application";
@@ -326,6 +346,9 @@
 				Base,
 			);
 			mainGroup = FA41F6D22682DB7B00CC16F2;
+			packageReferences = (
+				B9710D46268B7A9B007D4C7D /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = FA41F6DC2682DB7B00CC16F2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -472,9 +495,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9CDA4D9268B0C6000DBB095 /* BookmarksViewController.swift in Sources */,
 				A545711126891ACF00262543 /* LoginViewController.swift in Sources */,
 				FAC1487B2683970A001AD53B /* Airport.swift in Sources */,
 				FA41F7172682EF6B00CC16F2 /* Aircraft.swift in Sources */,
+				B9CDA4D7268AEFB300DBB095 /* AirportDetailsViewController.swift in Sources */,
 				FA41F7192682F79300CC16F2 /* Feed.swift in Sources */,
 				FAC1487D2683D97E001AD53B /* MapViewController.swift in Sources */,
 				B9CDA4CF2685B84400DBB095 /* SpinnerViewController.swift in Sources */,
@@ -487,8 +512,10 @@
 				A508260426893C2000FCF823 /* AppConstants.swift in Sources */,
 				FAC1488126843BB6001AD53B /* FlightMapViewController.swift in Sources */,
 				A50825E926893AEF00FCF823 /* NetworkGeneric.swift in Sources */,
+				B9CDA4D3268A828500DBB095 /* FlightDetail.swift in Sources */,
 				FA41F7152682E33B00CC16F2 /* AirportsViewController.swift in Sources */,
 				FA41F6E12682DB7B00CC16F2 /* SceneDelegate.swift in Sources */,
+				B9CDA4D1268A7FF500DBB095 /* FlightDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -825,6 +852,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B9710D46268B7A9B007D4C7D /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B9710D47268B7A9B007D4C7D /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9710D46268B7A9B007D4C7D /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		B9710D49268B7A9B007D4C7D /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9710D46268B7A9B007D4C7D /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA41F6D32682DB7B00CC16F2 /* Project object */;
 }
