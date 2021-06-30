@@ -17,6 +17,7 @@
 		A545711126891ACF00262543 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A545711026891ACF00262543 /* LoginViewController.swift */; };
 		B9710D48268B7A9B007D4C7D /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = B9710D47268B7A9B007D4C7D /* Realm */; };
 		B9710D4A268B7A9B007D4C7D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B9710D49268B7A9B007D4C7D /* RealmSwift */; };
+		B9710D4C268D3362007D4C7D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9710D4B268D3362007D4C7D /* ProfileViewController.swift */; };
 		B9CDA4CF2685B84400DBB095 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CDA4CE2685B84400DBB095 /* SpinnerViewController.swift */; };
 		B9CDA4D1268A7FF500DBB095 /* FlightDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CDA4D0268A7FF500DBB095 /* FlightDetailsViewController.swift */; };
 		B9CDA4D3268A828500DBB095 /* FlightDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CDA4D2268A828500DBB095 /* FlightDetail.swift */; };
@@ -71,6 +72,7 @@
 		A508260326893C2000FCF823 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		A545711026891ACF00262543 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B265AA6FD1B8C0D383941C84 /* Pods-AircraftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AircraftTests.debug.xcconfig"; path = "Target Support Files/Pods-AircraftTests/Pods-AircraftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B9710D4B268D3362007D4C7D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B9CDA4CE2685B84400DBB095 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		B9CDA4D0268A7FF500DBB095 /* FlightDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailsViewController.swift; sourceTree = "<group>"; };
 		B9CDA4D2268A828500DBB095 /* FlightDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetail.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				B9CDA4D0268A7FF500DBB095 /* FlightDetailsViewController.swift */,
 				B9CDA4D6268AEFB300DBB095 /* AirportDetailsViewController.swift */,
 				B9CDA4D8268B0C6000DBB095 /* BookmarksViewController.swift */,
+				B9710D4B268D3362007D4C7D /* ProfileViewController.swift */,
 			);
 			path = Aircraft;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				FA41F7172682EF6B00CC16F2 /* Aircraft.swift in Sources */,
 				B9CDA4D7268AEFB300DBB095 /* AirportDetailsViewController.swift in Sources */,
 				FA41F7192682F79300CC16F2 /* Feed.swift in Sources */,
+				B9710D4C268D3362007D4C7D /* ProfileViewController.swift in Sources */,
 				FAC1487D2683D97E001AD53B /* MapViewController.swift in Sources */,
 				B9CDA4CF2685B84400DBB095 /* SpinnerViewController.swift in Sources */,
 				FA41F6E32682DB7B00CC16F2 /* ViewController.swift in Sources */,

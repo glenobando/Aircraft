@@ -10,6 +10,9 @@ import Foundation
 
 struct appConstants{
     static let loginTokenKey = "loginToken"
+    static let userNameKey = "userName"
+    static let userEmailKey = "userEmail"
+    static let userImgKey = "userImg"
     static let baseUrl = "https://dbreness-node-restserver.herokuapp.com/"
     
 }

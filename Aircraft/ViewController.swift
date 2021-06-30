@@ -52,5 +52,5 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
 
 
 struct UserList: Codable {
-    var usuarios:[Usuario]
+    var usuarios:[User]
 }
