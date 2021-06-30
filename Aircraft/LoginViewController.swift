@@ -12,14 +12,17 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var imageView: UIImageView!
     
     var client : Client?
     let session = URLSession.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+        let urlstring = URL(string: "https://www.karobardaily.com/wp-content/uploads/2019/07/1564549144.png")!
+        imageView.load(url: urlstring)
     }
     
     @IBAction func login(_ sender: Any) {
@@ -46,6 +49,20 @@ class LoginViewController: UIViewController {
             }
         })
         
+    }
+}
+
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
     }
 }
 

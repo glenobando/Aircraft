@@ -375,24 +375,31 @@
                                     <action selector="login:" destination="bHo-id-y8T" eventType="touchUpInside" id="mrt-SQ-V7M"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FuA-SP-ssd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oUN-uK-xn2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tg-Ip-xP7" firstAttribute="top" secondItem="6ul-tv-OiW" secondAttribute="bottom" constant="52" id="4o0-Bx-aTQ"/>
                             <constraint firstItem="6Tg-Ip-xP7" firstAttribute="centerX" secondItem="4pW-84-878" secondAttribute="centerX" id="aba-5t-VfR"/>
+                            <constraint firstItem="FuA-SP-ssd" firstAttribute="top" secondItem="4pW-84-878" secondAttribute="top" id="hDU-fC-yKc"/>
                             <constraint firstItem="6ul-tv-OiW" firstAttribute="centerY" secondItem="4pW-84-878" secondAttribute="centerY" id="hgq-jf-GnI"/>
                             <constraint firstItem="6ul-tv-OiW" firstAttribute="centerX" secondItem="4pW-84-878" secondAttribute="centerX" id="osi-2Z-ydU"/>
+                            <constraint firstItem="FuA-SP-ssd" firstAttribute="leading" secondItem="oUN-uK-xn2" secondAttribute="leading" id="q0I-bF-QEf"/>
+                            <constraint firstItem="FuA-SP-ssd" firstAttribute="trailing" secondItem="oUN-uK-xn2" secondAttribute="trailing" id="rLU-m9-Gbr"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="FuA-SP-ssd" id="tie-Fe-t0H"/>
                         <outlet property="txtEmail" destination="D15-ce-Gdj" id="2wZ-JV-HlJ"/>
                         <outlet property="txtPassword" destination="cHk-84-IFF" id="UUZ-s4-nGp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OLx-24-Nhh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-159" y="445"/>
+            <point key="canvasLocation" x="-159.42028985507247" y="444.64285714285711"/>
         </scene>
         <!--Flights-->
         <scene sceneID="Iph-bM-4m0">
