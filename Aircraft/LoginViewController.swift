@@ -37,9 +37,13 @@ class LoginViewController: UIViewController {
             
             switch result {
             case .success(let users):
-                print(users.token!)
+                //print(users.token!)
+                //print(users)
                 let defaults = UserDefaults.standard
                 defaults.set(users.token!, forKey: appConstants.loginTokenKey)
+                defaults.set(users.user.nombre!, forKey: appConstants.userNameKey)
+                defaults.set(users.user.email!, forKey: appConstants.userEmailKey)
+                defaults.set(users.user.img!, forKey: appConstants.userImgKey)
                 defaults.synchronize()
                 self.dismiss(animated: true, completion: nil)
             case .failure(let error):
@@ -66,6 +70,12 @@ extension UIImageView {
 }
 
 struct Usuario: Codable {
+    var ok: Bool?
+    var user: User
+    var token: String?
+}
+
+struct User: Codable {
     var nombre:String?
     var uid:String?
     var email:String?
@@ -74,4 +84,5 @@ struct Usuario: Codable {
     var estado: Bool?
     var ok: Bool?
     var token: String?
+    var img: String?
 }

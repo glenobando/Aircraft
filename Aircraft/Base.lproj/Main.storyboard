@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kc6-uP-RD1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kc6-uP-RD1">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,6 +22,7 @@
                         <segue destination="hMJ-gb-zlA" kind="relationship" relationship="viewControllers" id="Rbd-d5-n3x"/>
                         <segue destination="pql-tl-X76" kind="relationship" relationship="viewControllers" id="d3Y-B5-VxB"/>
                         <segue destination="SSb-bq-Jmn" kind="relationship" relationship="viewControllers" id="dk1-rN-FTd"/>
+                        <segue destination="MSX-Um-CiP" kind="relationship" relationship="viewControllers" id="54D-uH-Jak"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HwL-qk-fKE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -46,10 +47,10 @@
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="celda" textLabel="p8w-Ab-fEo" detailTextLabel="ajh-XG-oWs" style="IBUITableViewCellStyleSubtitle" id="epr-8b-eO9">
-                                        <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="epr-8b-eO9" id="32e-LX-GeL">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="384.5" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="p8w-Ab-fEo">
@@ -287,10 +288,10 @@
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="celda" textLabel="SYI-7R-ei0" detailTextLabel="T6r-Qp-4Ua" style="IBUITableViewCellStyleValue1" id="NbP-Ea-cuf">
-                                        <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NbP-Ea-cuf" id="Loq-FG-tvM">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="384.5" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SYI-7R-ei0">
@@ -301,7 +302,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="T6r-Qp-4Ua">
-                                                    <rect key="frame" x="342" y="15" width="33" height="14.5"/>
+                                                    <rect key="frame" x="343.5" y="15" width="33" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
@@ -643,7 +644,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OLx-24-Nhh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-159.42028985507247" y="444.64285714285711"/>
+            <point key="canvasLocation" x="-138" y="70"/>
         </scene>
         <!--Flights-->
         <scene sceneID="Iph-bM-4m0">
@@ -663,6 +664,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ixg-Ey-8MA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1585.5072463768117" y="69.642857142857139"/>
+        </scene>
+        <!--User Profile-->
+        <scene sceneID="MYT-JB-B1d">
+            <objects>
+                <viewController title="User Profile" id="MSX-Um-CiP" customClass="ProfileViewController" customModule="Aircraft" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wVj-gZ-Mcg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2XO-l8-QuA">
+                                <rect key="frame" x="107" y="20" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="XQQ-7u-WqK"/>
+                                    <constraint firstAttribute="width" constant="200" id="qXs-mH-1RW"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ON8-dG-oxQ">
+                                <rect key="frame" x="20" y="240" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cep-T2-EVU">
+                                <rect key="frame" x="20" y="270.5" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KJ4-4M-NU5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KJ4-4M-NU5" firstAttribute="trailing" secondItem="Cep-T2-EVU" secondAttribute="trailing" constant="20" id="2ED-LN-xao"/>
+                            <constraint firstItem="ON8-dG-oxQ" firstAttribute="top" secondItem="2XO-l8-QuA" secondAttribute="bottom" constant="20" id="LBH-UT-QjW"/>
+                            <constraint firstItem="Cep-T2-EVU" firstAttribute="leading" secondItem="KJ4-4M-NU5" secondAttribute="leading" constant="20" id="OOn-yg-JBf"/>
+                            <constraint firstItem="KJ4-4M-NU5" firstAttribute="trailing" secondItem="ON8-dG-oxQ" secondAttribute="trailing" constant="20" id="Qd1-nl-7cO"/>
+                            <constraint firstItem="ON8-dG-oxQ" firstAttribute="leading" secondItem="KJ4-4M-NU5" secondAttribute="leading" constant="20" id="TB4-nN-oU3"/>
+                            <constraint firstItem="2XO-l8-QuA" firstAttribute="top" secondItem="KJ4-4M-NU5" secondAttribute="top" constant="20" id="Vfd-F8-YzT"/>
+                            <constraint firstItem="Cep-T2-EVU" firstAttribute="top" secondItem="ON8-dG-oxQ" secondAttribute="bottom" constant="10" id="a2F-go-7mX"/>
+                            <constraint firstItem="2XO-l8-QuA" firstAttribute="centerX" secondItem="wVj-gZ-Mcg" secondAttribute="centerX" id="z6H-xo-gpD"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle.fill" catalog="system" id="o1s-HQ-hBy"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="Cep-T2-EVU" id="mSE-0p-xRR"/>
+                        <outlet property="nameLabel" destination="ON8-dG-oxQ" id="axR-Bb-OqD"/>
+                        <outlet property="userImgView" destination="2XO-l8-QuA" id="cYt-7T-5hr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FG0-2k-lYh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-139.13043478260872" y="732.58928571428567"/>
         </scene>
         <!--Airports-->
         <scene sceneID="pWJ-ul-pzJ">
@@ -712,6 +765,7 @@
         <image name="airplane.circle.fill" catalog="system" width="128" height="121"/>
         <image name="book.fill" catalog="system" width="128" height="102"/>
         <image name="flag.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
